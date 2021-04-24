@@ -9,10 +9,14 @@ def map_professors_and_classes(filename):
     with open(filename) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         for row in csv_reader:
+            # Gather data from the csv
+            # (Some professors have an accented e in their name which shows up as '&#233;')
             current_professors = row[10].replace('&#233;', 'e').split(';')
             current_class = row[1]
             for current_professor in current_professors:
                 current_professor = current_professor.strip()
+
+                # Don't add classes when the professor's name is blank
                 if not current_professor:
                     continue
 
