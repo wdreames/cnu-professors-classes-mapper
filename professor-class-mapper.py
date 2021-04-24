@@ -1,4 +1,5 @@
 import csv
+import os
 
 professors = dict()
 classes = dict()
@@ -29,12 +30,12 @@ def map_professors_and_classes(filename):
 
 
 if __name__ == '__main__':
-    map_professors_and_classes('Fall 2021 ScheduleOfClasses.csv')
-    map_professors_and_classes('Spring 2021 ScheduleOfClasses.csv')
-    map_professors_and_classes('Fall 2020 ScheduleOfClasses.csv')
-    map_professors_and_classes('Spring 2020 ScheduleOfClasses.csv')
-    map_professors_and_classes('Fall 2019 ScheduleOfClasses.csv')
-    map_professors_and_classes('Spring 2019 ScheduleOfClasses.csv')
+    map_professors_and_classes(os.path.join('data', 'Fall 2021 ScheduleOfClasses.csv'))
+    map_professors_and_classes(os.path.join('data', 'Spring 2021 ScheduleOfClasses.csv'))
+    map_professors_and_classes(os.path.join('data', 'Fall 2020 ScheduleOfClasses.csv'))
+    map_professors_and_classes(os.path.join('data', 'Spring 2020 ScheduleOfClasses.csv'))
+    map_professors_and_classes(os.path.join('data', 'Fall 2019 ScheduleOfClasses.csv'))
+    map_professors_and_classes(os.path.join('data', 'Spring 2019 ScheduleOfClasses.csv'))
 
     input_val = ''
     while input_val != 'classes' and input_val != 'professors' and input_val != 'both':
