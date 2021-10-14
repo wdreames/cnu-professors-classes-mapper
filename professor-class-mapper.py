@@ -34,6 +34,7 @@ def map_professors_and_classes(filename):
 
 
 if __name__ == '__main__':
+    map_professors_and_classes(os.path.join('data', 'Spring 2022 ScheduleOfClasses.csv'))
     map_professors_and_classes(os.path.join('data', 'Fall 2021 ScheduleOfClasses.csv'))
     map_professors_and_classes(os.path.join('data', 'Spring 2021 ScheduleOfClasses.csv'))
     map_professors_and_classes(os.path.join('data', 'Fall 2020 ScheduleOfClasses.csv'))
